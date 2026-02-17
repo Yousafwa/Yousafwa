@@ -14,7 +14,7 @@ class WindowsAppExecutor
     /** @var string[] */
     private array $allowedExtensions = ['exe', 'bat', 'cmd', 'com', 'msi'];
 
-    public function __construct(string $baseDirectory = 'D:\\')
+    public function __construct(string $baseDirectory = 'E:\\Computer-Based Training\\ALC_BOOK_1\\')
     {
         $this->baseDirectory = $this->normalizeDirectory($baseDirectory);
     }
@@ -196,7 +196,7 @@ class WindowsAppExecutor
 if (PHP_SAPI === 'cli' && isset($_SERVER['SCRIPT_FILENAME']) && realpath((string) $_SERVER['SCRIPT_FILENAME']) === __FILE__) {
     try {
         // Change this directory if your executables are on a different path.
-        $executor = new WindowsAppExecutor('E:\\Computer-Based Training\\ALC BOOK 1\\');
+        $executor = new WindowsAppExecutor('E:\\Computer-Based Training\\ALC_BOOK_1\\');
 
         global $argv;
         $target = $argv[1] ?? 'bk1.exe';
